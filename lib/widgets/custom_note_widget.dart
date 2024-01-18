@@ -10,7 +10,7 @@ class CustomNoteWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 10),
+      padding: const EdgeInsets.only(bottom: 10, left: 10, right: 10),
       child: Container(
           padding:
               const EdgeInsets.only(top: 24, bottom: 24, left: 16, right: 8),
@@ -30,7 +30,7 @@ class CustomNoteWidget extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 16),
                   child: Text('Build your career with Tharwat Samy',
                       style: TextStyle(
-                          color: Colors.black.withOpacity(0.5), fontSize: 20)),
+                          color: Colors.black.withOpacity(0.5), fontSize: 18)),
                 ),
                 trailing: const Icon(
                   FontAwesomeIcons.trash,
