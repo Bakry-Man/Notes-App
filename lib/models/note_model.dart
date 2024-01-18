@@ -5,5 +5,6 @@ class NoteModel {
   final String noteDesc;
   final Color color;
 
-  NoteModel(this.color, {required this.noteDesc, required this.noteTitle});
+  NoteModel(
+      {required this.color, required this.noteDesc, required this.noteTitle});
 }
