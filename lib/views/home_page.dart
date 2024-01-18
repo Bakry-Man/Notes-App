@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:notesapp/constats/const.dart';
 import 'package:notesapp/models/note_model.dart';
 import 'package:notesapp/widgets/add_note_bottom_sheet.dart';
 import 'package:notesapp/widgets/custom_app_bar.dart';
@@ -23,14 +24,14 @@ class HomeView extends StatelessWidget {
           ],
         ),
         floatingActionButton: FloatingActionButton(
-          backgroundColor: const Color(0xFF7FEEE2),
+          backgroundColor: kPrimaryColor,
           onPressed: () {
             showModalBottomSheet(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16)),
                 context: context,
                 builder: (context) {
-                  return const AddNoteButton();
+                  return const AddNoteButtomSheet();
                 });
           },
           child: const Icon(
