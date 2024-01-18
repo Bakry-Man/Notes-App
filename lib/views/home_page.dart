@@ -11,8 +11,8 @@ class HomeView extends StatelessWidget {
   List<NoteModel> notes = [];
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-        body: Column(
+    return Scaffold(
+        body: const Column(
           children: [
             SizedBox(
               height: 20,
@@ -21,13 +21,28 @@ class HomeView extends StatelessWidget {
             Expanded(child: NotesListView())
           ],
         ),
-        floatingActionButton: CircleAvatar(
-          radius: 25,
-          backgroundColor: Color(0xFF7FEEE2),
-          child: Icon(
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: const Color(0xFF7FEEE2),
+          onPressed: () {
+            showModalBottomSheet(
+                context: context,
+                builder: (context) {
+                  return const AddNoteButton();
+                });
+          },
+          child: const Icon(
             FontAwesomeIcons.plus,
             color: Colors.black,
           ),
         ));
+  }
+}
+
+class AddNoteButton extends StatelessWidget {
+  const AddNoteButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
