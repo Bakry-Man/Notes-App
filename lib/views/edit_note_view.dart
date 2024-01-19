@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:notesapp/widgets/custom_app_bar.dart';
+import 'package:notesapp/widgets/custom_add_note_button_sheet.dart';
 import 'package:notesapp/widgets/custom_app_bar_for_Edit_view.dart';
 import 'package:notesapp/widgets/custom_text_field.dart';
-
-String id = 'EditNoteView';
 
 class EditNoteView extends StatelessWidget {
   const EditNoteView({
@@ -12,18 +10,27 @@ class EditNoteView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Column(
         children: [
-          const CustomAppBarForEditView(),
-          const SizedBox(
+          SizedBox(
+            height: 20,
+          ),
+          CustomAppBarForEditView(),
+          SizedBox(
             height: 32,
           ),
           CustomTextField(hint: 'Title'),
           CustomTextField(
             hint: 'Content',
-            edgeInsetsGeometry:
-                const EdgeInsets.only(top: 70, bottom: 70, left: 12),
+            edgeInsetsGeometry: EdgeInsets.only(top: 70, bottom: 70, left: 12),
+          ),
+          Spacer(),
+          CustomAddButton(
+            text: 'Save',
+          ),
+          SizedBox(
+            height: 16,
           )
         ],
       ),

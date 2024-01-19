@@ -2,9 +2,13 @@ import 'package:flutter/material.dart';
 
 class NoteModel {
   final String noteTitle;
-  final String noteDesc;
-  final Color color;
+  final String noteContent;
+  final int color;
+  final String date;
 
   NoteModel(
-      {required this.color, required this.noteDesc, required this.noteTitle});
+      {required this.noteTitle,
+      required this.noteContent,
+      required this.color,
+      required this.date});
 }
