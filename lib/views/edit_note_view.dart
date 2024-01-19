@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notesapp/widgets/custom_add_note_button_sheet.dart';
+import 'package:notesapp/widgets/custom_add_note_button.dart';
 import 'package:notesapp/widgets/custom_app_bar_for_Edit_view.dart';
 import 'package:notesapp/widgets/custom_text_field.dart';
 
@@ -26,7 +26,7 @@ class EditNoteView extends StatelessWidget {
             edgeInsetsGeometry: EdgeInsets.only(top: 70, bottom: 70, left: 12),
           ),
           Spacer(),
-          CustomAddButton(
+          CustomAddNoteButton(
             text: 'Save',
           ),
           SizedBox(
