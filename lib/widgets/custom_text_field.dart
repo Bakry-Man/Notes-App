@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:notesapp/constats/const.dart';
 
 class CustomTextField extends StatelessWidget {
-  CustomTextField({super.key, required this.hint, this.edgeInsetsGeometry});
+  CustomTextField({
+    super.key,
+    required this.hint,
+    this.edgeInsetsGeometry,
+  });
 
   final String hint;
   EdgeInsetsGeometry? edgeInsetsGeometry;
