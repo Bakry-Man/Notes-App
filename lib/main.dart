@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
+import 'package:notesapp/constats/const.dart';
 import 'package:notesapp/views/edit_note_view.dart';
 import 'package:notesapp/views/home_view.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-
   await Hive.initFlutter();
-  await Hive.openBox('keyedBox');
-  await Hive.open('indexedBox');
+  await Hive.openBox(kNotesBox);
+
   runApp(const NotesApp());
 }
 
