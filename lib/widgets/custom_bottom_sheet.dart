@@ -35,44 +35,42 @@ class _AddNoteFormState extends State<AddNoteForm> {
     return Form(
       key: formKey,
       autovalidateMode: autovalidateMode,
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 32,
-            ),
-            CustomTextField(
-              onSaved: (value) {
-                noteTitle = value;
-              },
-              hint: 'Title',
-            ),
-            CustomTextField(
-              onSaved: (value) {
-                noteContent = value;
-              },
-              hint: 'Content',
-              edgeInsetsGeometry:
-                  const EdgeInsets.only(top: 70, bottom: 70, left: 12),
-            ),
-            const SizedBox(
-              height: 100,
-            ),
-            CustomAddNoteButton(
-              onTap: () {
-                if (formKey.currentState!.validate()) {
-                  formKey.currentState!.save();
-                } else {
-                  autovalidateMode = AutovalidateMode.always;
-                }
-              },
-              text: 'Add',
-            ),
-            const SizedBox(
-              height: 16,
-            )
-          ],
-        ),
+      child: Column(
+        children: [
+          const SizedBox(
+            height: 32,
+          ),
+          CustomTextField(
+            onSaved: (value) {
+              noteTitle = value;
+            },
+            hint: 'Title',
+          ),
+          CustomTextField(
+            onSaved: (value) {
+              noteContent = value;
+            },
+            hint: 'Content',
+            edgeInsetsGeometry:
+                const EdgeInsets.only(top: 70, bottom: 70, left: 12),
+          ),
+          const SizedBox(
+            height: 100,
+          ),
+          CustomAddNoteButton(
+            onTap: () {
+              if (formKey.currentState!.validate()) {
+                formKey.currentState!.save();
+              } else {
+                autovalidateMode = AutovalidateMode.always;
+              }
+            },
+            text: 'Add',
+          ),
+          const SizedBox(
+            height: 16,
+          )
+        ],
       ),
     );
   }
