@@ -4,7 +4,7 @@ import 'package:meta/meta.dart';
 import 'package:notesapp/constats/const.dart';
 import 'package:notesapp/models/note_model.dart';
 
-part 'add_note_state.dart';
+part 'add_note_states.dart';
 
 class AddNoteCubit extends Cubit<AddNoteState> {
   AddNoteCubit() : super(AddNoteInitial());
@@ -12,7 +12,7 @@ class AddNoteCubit extends Cubit<AddNoteState> {
   addNote(NoteModel note) async {
     emit(AddNoteLoading());
     try {
-      var notesBox = Hive.box(kNotesBox);
+      var notesBox = Hive.box<NoteModel>(kNotesBox);
       await notesBox.add(note);
       emit(AddNoteSuccess());
     } catch (e) {
