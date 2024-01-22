@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:notesapp/constats/const.dart';
 import 'package:notesapp/models/note_model.dart';
-import 'package:notesapp/widgets/custom_bottom_sheet.dart';
+import 'package:notesapp/widgets/custom_add_note_bottom_sheet.dart';
 import 'package:notesapp/widgets/custom_app_bar.dart';
 import 'package:notesapp/widgets/custom_note_widget.dart';
 import 'package:notesapp/widgets/notes_list_view.dart';
