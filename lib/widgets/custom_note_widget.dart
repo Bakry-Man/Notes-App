@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notesapp/models/note_model.dart';
+
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomNoteWidget extends StatelessWidget {
